@@ -1,11 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCircleInfo, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import logo from '../../public/images/logo.svg';
 import { motion } from 'framer-motion';
+import { faBehance, faFacebook, faInstagram, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
+  const router = useRouter();
   return (
     <nav className="navbar navbar-dark bg-primary">
       <div className="container">
@@ -17,24 +21,41 @@ const Navbar = () => {
         <div className="offcanvas offcanvas-start text-bg-primary" tabindex="-1" id="infoOC"
           aria-labelledby="offcanvasNavbarLabel">
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-            <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h3 className="offcanvas-title" id="offcanvasNavbarLabel"><span className='fw-bolder'>Sound</span><span className='fw-lighter'>Wave</span></h3>
+            <FontAwesomeIcon type='button' icon={faTimes} className='text-light' data-bs-dismiss="offcanvas" aria-label="Close" />
           </div>
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <li className="nav-item fw-light">
+                SoundWave is a new era music studio. We provide various services ranging from audio editing to music production.
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+              <hr className='nav-item' />
+              <li className='nav-item'>
+                <span>Social Links</span>
+                <br />
+                <span className='mt-2 d-flex align-items-center justify-content-start'>
+                  <a className='me-auto' href='/'>
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a className='me-auto' href='/'>
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                  </a>
+                  <a className='me-auto' href='/'>
+                    <FontAwesomeIcon icon={faFacebook} />
+                  </a>
+                  <a className='me-auto' href='/'>
+                    <FontAwesomeIcon icon={faBehance} />
+                  </a>
+                  <a className='me-auto' href='/'>
+                    <FontAwesomeIcon icon={faYoutube} />
+                  </a>
+                </span>
               </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div className="dropdown-menu" aria-labelledby="dropdownId">
-                  <a className="dropdown-item" href="#">Action 1</a>
-                  <a className="dropdown-item" href="#">Action 2</a>
-                </div>
+              <hr className='nav-item' />
+              <li className='nav-item fw-lighter opacity-50 text-center'>
+                SoundWave
+                <br />
+                <span>Rights Reserved &copy; 2023</span>
               </li>
             </ul>
           </div>
@@ -58,31 +79,29 @@ const Navbar = () => {
           </a>
         </motion.div>
           <FontAwesomeIcon
-            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
+            type="button" data-bs-toggle="offcanvas" data-bs-target="#menuSW"
+            aria-controls="menuSW"
             icon={faBars}
           />
-        <div className="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
+        <div className="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="menuSW"
+          aria-labelledby="menuSWLabel">
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-            <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 className="offcanvas-title" id="menuSWLabel">Menu</h5>
+            <FontAwesomeIcon type='button' icon={faTimes} className='text-light' data-bs-dismiss="offcanvas" aria-label="Close" />
           </div>
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <Link className={router.pathname == '/' ? 'active nav-link' : 'nav-link'} href="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
+                <Link className={router.pathname == '/about-us' ? 'active nav-link' : 'nav-link'} href="/about-us">About</Link>
               </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div className="dropdown-menu" aria-labelledby="dropdownId">
-                  <a className="dropdown-item" href="#">Action 1</a>
-                  <a className="dropdown-item" href="#">Action 2</a>
-                </div>
+              <li className="nav-item">
+                <Link className={router.pathname == '/products-and-services' ? 'active nav-link' : 'nav-link'} href="/products-and-services">Products and Services</Link>
+              </li>
+              <li className="nav-item">
+                <Link className={router.pathname == '/lets-talk' ? 'active nav-link' : 'nav-link'} href="/lets-talk">Let's Talk</Link>
               </li>
             </ul>
           </div>
