@@ -1,6 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
+import logo from '../../public/images/logo.svg';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   return (
@@ -36,15 +39,30 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <a className="navbar-brand" href="#">
-            <img src=''></img>
-        </a>
+        <motion.div initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          whileHover={{ opacity: 1, scale: 0.9 }}
+          transition={{
+            duration: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001
+            }
+          }}
+          >
+          <a className="navbar-brand" href="#">
+            <Image src={logo} width={48} height={48} />
+          </a>
+        </motion.div>
           <FontAwesomeIcon
             type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar"
             icon={faBars}
           />
-        <div className="offcanvas offcanvas-end text-bg-primary" tabindex="-1" id="offcanvasNavbar"
+        <div className="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div className="offcanvas-header">
             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
