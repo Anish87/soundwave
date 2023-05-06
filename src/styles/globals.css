@@ -86,7 +86,7 @@ body {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-bahn);
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
