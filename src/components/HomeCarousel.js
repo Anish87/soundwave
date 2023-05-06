@@ -7,7 +7,7 @@ const HomeCarousel = () => {
         <Carousel>
             <Carousel.Item>
                 <img
-                className="d-flex rounded-5 img-fluid"
+                className="d-flex rounded-3 img-fluid"
                 src="https://images.pexels.com/photos/220429/pexels-photo-220429.jpeg"
                 alt="First slide"
                 />
@@ -19,7 +19,7 @@ const HomeCarousel = () => {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                className="d-flex rounded-5 img-fluid" 
+                className="d-flex rounded-3 img-fluid" 
                 src="https://images.pexels.com/photos/220429/pexels-photo-220429.jpeg"
                 alt="Second slide"
                 />
@@ -32,7 +32,7 @@ const HomeCarousel = () => {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                className="d-flex rounded-5 img-fluid"
+                className="d-flex rounded-3 img-fluid"
                 src="https://images.pexels.com/photos/220429/pexels-photo-220429.jpeg"
                 alt="Third slide"
                 />

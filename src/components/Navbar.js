@@ -11,7 +11,7 @@ import { faBehance, faFacebook, faInstagram, faLinkedinIn, faYoutube } from '@fo
 const Navbar = () => {
   const router = useRouter();
   return (
-    <nav className="navbar navbar-dark bg-primary m-2 rounded">
+    <nav className="navbar navbar-dark bg-primary m-2 mb-0 rounded-3">
       <div className="container">
         <FontAwesomeIcon
             type="button" data-bs-toggle="offcanvas" data-bs-target="#infoOC"
