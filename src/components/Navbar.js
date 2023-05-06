@@ -60,21 +60,22 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <motion.div initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ opacity: 1, scale: 0.9 }}
+        <motion.div initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 0.9 }}
+          whileHover={{ opacity: 1, scale: 0.8 }}
           transition={{
-            duration: 0.3,
+            duration: 0.2,
             ease: [0, 0.71, 0.2, 1.01],
             scale: {
               type: "spring",
               damping: 5,
-              stiffness: 100,
+              stiffness: 50,
               restDelta: 0.001
             }
           }}
           >
           <a className="navbar-brand" href="#">
+            {/* <span className='fw-bolder h4'>Sound</span><span className='fw-lighter h4'>Wave</span> */}
             <Image src={logo} width={48} height={48} />
           </a>
         </motion.div>

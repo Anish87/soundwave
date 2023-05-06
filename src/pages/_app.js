@@ -10,7 +10,8 @@ config.autoAddCss = false;
 
 const Bahnschrift = localFont({
   src: [
-    {path: '../styles/bahnschrift-webfont.woff2', weight: '100'}
+    {path: '../styles/bahnschrift-webfont.woff2', weight: '100'},
+    {path: '../styles/bahnschrift-webfont.woff', weight: '100'}
   ]
 });
 
