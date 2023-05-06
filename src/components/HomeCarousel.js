@@ -3,8 +3,8 @@ import { Carousel } from 'react-bootstrap';
 
 const HomeCarousel = () => {
   return (
-    <div className='p-2'>
-        <Carousel>
+    <div className='p-2 bg-dark'>
+        <Carousel className='bg-dark'>
             <Carousel.Item>
                 <img
                 className="d-flex rounded-3 img-fluid"
