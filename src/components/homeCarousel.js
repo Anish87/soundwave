@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 
 const HomeCarousel = () => {
   return (
-    <div className='px-4 py-4'>
+    <div className='p-2'>
         <Carousel>
             <Carousel.Item>
                 <img
