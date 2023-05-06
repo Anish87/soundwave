@@ -76,7 +76,7 @@ const Navbar = () => {
           >
           <a className="navbar-brand" href="#">
             {/* <span className='fw-bolder h4'>Sound</span><span className='fw-lighter h4'>Wave</span> */}
-            <Image src={logo} width={48} height={48} />
+            <Image src={logo} width={48} height={48} alt='SoundWave' />
           </a>
         </motion.div>
           <FontAwesomeIcon
