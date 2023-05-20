@@ -19,7 +19,7 @@ const Navbar = () => {
               aria-controls="infoOC"
               icon={faCircleInfo}
             />
-          <div className="offcanvas offcanvas-start text-bg-primary" tabindex="-1" id="infoOC"
+          <div className="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="infoOC"
             aria-labelledby="offcanvasNavbarLabel">
             <div className="offcanvas-header">
               <h3 className="offcanvas-title" id="offcanvasNavbarLabel"><span className='fw-bolder'>Sound</span><span className='fw-lighter'>Wave</span></h3>
