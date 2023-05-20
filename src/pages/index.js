@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar';
-import HomeCarousel from '@/components/HomeCarousel';
+import HomeHeader from '@/components/HomeHeader';
+import HomeAbout from '@/components/HomeAbout';
 
 export default function Home() {
   return (
@@ -12,9 +13,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-dark'>
-        <Navbar />
-        <HomeCarousel />
+      <main>
+        <div className='container'>
+          <Navbar />
+          <HomeHeader />
+          <HomeAbout />
+        </div>
       </main>
     </>
   )
